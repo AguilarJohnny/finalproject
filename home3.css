@@ -1,0 +1,373 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100%; /* Ensuring the body takes at least the full height of the viewport */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 10vh 100vh auto auto auto auto auto; /* Adjusted for hero to take 100vh */
+    min-height: 100vh;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;  /* Slightly reduced padding for small devices */
+    }
+}
+
+header {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: center; /* Adjusted for alignment of nav items */
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold color for hover */
+}
+
+.hero {
+    width: 100%;
+    height: 100vh; /* Setting the height to 100% of the viewport height */
+    overflow: hidden;
+    background-image: url('hero.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    color: Gold; 
+    font-size: 5em; 
+    padding: 20px; /* Adds padding around the text */
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    border-radius: 10px; /* rounds the corners of the background */
+}
+
+
+.cta-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two columns of equal width */
+    height: 100vh; /* Makes the section take up the entire viewport height */
+    align-items: center; /* Aligns content vertically */
+    text-align: center; /* Centers the text */
+    background-color: #f4f4f4; /* Light background color */
+}
+
+.cta-image img {
+    width: 100%; /* Ensures the image covers the full column */
+    height: auto; /* Maintains the aspect ratio of the image */
+	justify-content: center;
+}
+
+.cta-text {
+    padding: 20px; /* Adds padding around the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spaces out the items inside */
+}
+
+.cta-text h1 {
+    color: #333; /* Dark text for better readability */
+}
+
+.cta-text ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0;
+}
+
+.cta-text ul li {
+    color: darkgoldenrod; /* Mustard colored text for list items */
+    margin: 10px 0; /* Adds space between list items */
+}
+
+.cta {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background for the button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-self: center; /* Centers the button in its container */
+	width: 50%;
+	border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#classes {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh; /* Set the height to cover the full viewport height */
+    grid-gap: 10px;
+    overflow: auto; /* Allows scrolling within the section if content overflows */
+}
+
+.class-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Two rows of equal height */
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    grid-gap: 10px;
+    height: calc(100% - 40px); /* Adjust height to account for padding and header */
+}
+
+.class-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.class-img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ccc; /* Separation line between image and text */
+}
+
+.class-name {
+    margin-top: 5px;
+    font-size: 1rem; /* Appropriate text size */
+    color: #333;
+}
+
+
+#trainers {
+    display: grid;
+    grid-template-rows: auto 1fr;
+	
+    align-items: center;
+    text-align: center;
+    height: 70vh; /* Ensures the section takes up the full viewport height */
+    padding: 20px;
+    background-color: #f4f4f4; /* Provides a neutral background color */
+	 overflow: auto; /* Allows scrolling within the section if content overflows */
+	 
+}
+
+
+
+.trainer-grid {
+    display: grid;
+	
+    grid-template-columns: repeat(6, 1fr); /* Six equal columns */
+    width: 100%; /* Full width to align with the section */
+    align-items: center; /* Aligns items vertically within their cells */
+	grid-gap: 10px;
+}
+
+.trainer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	border: 1px solid #ccc;
+	background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
+.trainer-item.empty {
+    
+    background-color: transparent;
+}
+
+.trainer-img {
+    max-width: 100%; /* Ensures images do not exceed the width of the column */
+    height: auto; /* Maintains aspect ratio */
+    border-bottom: 1px solid #ccc;
+}
+
+.trainer-name {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+#testimonials {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr; /* h1 and two rows for reviews */
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Neutral background */
+}
+
+#testimonials h1 {
+    margin-bottom: 20px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for reviews */
+    grid-template-rows: 1fr 1fr; 
+    gap: 20px; /* Space between reviews */
+    height: 100%; 
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border for each review */
+}
+
+.review-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.reviewer-info {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #666; /* Grey text for additional information */
+}
+
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* Sign-up Form page */
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.membership-form {
+    width: 50%; 
+    max-width: 600px; /* Ensures form does not grow too large */
+    background: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="tel"], input[type="month"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#singuup-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+	
+
+
+
+
+
+
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    height: 30vh; /* Footer takes up 30% of the viewport height */
+    padding: 20px;
+    background-color: #333; /* Dark background for the footer */
+    color: white; /* Light text color for visibility */
+    text-align: center; /* Aligns text to the left within each column */
+}
+
+.footer-col h1, .footer-col h2 {
+    margin: 0 0 10px; /* Space between heading and list	*/
+	padding: 20px;
+}
+
+.footer-col ul {
+    list-style: none; /* Removes default list bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.footer-col ul li a {
+    color: white; 
+    text-decoration: none; /* No underline on links */
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline; /* Underline on hover for better usability */
+}
